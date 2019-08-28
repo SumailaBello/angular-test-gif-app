@@ -5,8 +5,8 @@
     <form class="form-inline md-form form-sm active-purple active-purple-2 animated bounceInUp">
             <!-- <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon> -->
             <input class="form-control form-control-sm text-light text-center w-100" type="text" placeholder="Search" aria-label="Search"
-            mdbInput id="userQuery" (keyup)=clickableSearch()>
-            <button class="btn-sm disabled btn-primary btn-right" id="searchBtn" type="button" mdbBtn mdbWavesEffect (click) = "userSearch()">Search     <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon></button>
+            mdbInput id="userQuery" (keyup)="clickableSearch()" (change)="clickableSearch()">
+            <button class="btn-sm disabled btn-primary btn-right" id="searchBtn" type="button" mdbBtn mdbWavesEffect (click) = "userSearch()">Search <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon></button>
     </form>
 
     <h5>Search results will appear below</h5> <hr class="w-100 bg-dark">

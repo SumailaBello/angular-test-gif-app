@@ -27,13 +27,12 @@ export class HomeComponent implements OnInit {
   userSearch(){
     let image = (<HTMLImageElement>document.getElementById("img"));
     let loading = document.getElementById("loading");
-  this.data.search().subscribe(data =>{
+    this.data.search().subscribe(data =>{
     this.searchResult = data;
 
     console.log(this.searchResult);
   })
 
-  
   loading.innerHTML = "Loading..."
 
 }
@@ -41,9 +40,10 @@ export class HomeComponent implements OnInit {
   // makes search button clickable
   clickableSearch(){
     let userQuery = (<HTMLInputElement>document.getElementById("userQuery")).value;
-    document.getElementById("searchBtn").classList.remove("disabled");
     if(userQuery == ""){
       document.getElementById("searchBtn").classList.add("disabled");
+    }else{
+    document.getElementById("searchBtn").classList.remove("disabled");
     }
   }
 
