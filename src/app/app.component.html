@@ -1,0 +1,37 @@
+
+    <!-- Start your project here-->
+<!-- <div style="height: 100vh">
+  <div class="flex-center flex-column">
+    <h1 class="animated fadeIn mb-4">Material Design for Bootstrap (Angular)</h1>
+
+    <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
+    <h6 class="animated fadeIn mb-3">Start browsing <a href="https://mdbootstrap.com/angular">documentation</a>.</h6>
+
+    <p class="animated fadeIn text-muted">MDB Team</p>
+  </div>
+</div> -->
+<!-- /Start your project here-->
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" routerLink="/" >Giphy Search</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+
+      <li class="nav-item" id="about">
+        <a class="nav-link waves-light" routerLink="/about" mdbWavesEffect><mdb-icon fas icon="info-circle"></mdb-icon> About</a>
+      </li>
+
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+<router-outlet></router-outlet>

@@ -1,0 +1,28 @@
+
+<div class="container text-light text-center"><br>
+    <h3>WELCOME!</h3>
+    <!-- Search form -->
+    <form class="form-inline md-form form-sm active-purple active-purple-2 animated bounceInUp">
+            <!-- <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon> -->
+            <input class="form-control form-control-sm text-light text-center w-100" type="text" placeholder="Search" aria-label="Search"
+            mdbInput id="userQuery" (keyup)=clickableSearch()>
+            <button class="btn-sm disabled btn-primary btn-right" id="searchBtn" type="button" mdbBtn mdbWavesEffect (click) = "userSearch()">Search     <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon></button>
+    </form>
+
+    <h5>Search results will appear below</h5> <hr class="w-100 bg-dark">
+    
+        <ul *ngIf = "searchResult">
+            <li *ngFor = "let result of searchResult.data" id="result-list">
+            <h5 class="text-light m-10">{{result.title}}</h5>
+           <a [href]="result.images.original.url" target="blank"> <img [src] = "result.images.original.url" class="text-center" alt="" *ngIf="result.images" id="img"></a>
+            </li><br>
+        </ul> 
+
+    <!-- shows empty element if results are already loaded else displays the loading animation text -->
+    <div *ngIf = "searchResult; else load" class="">
+    </div>
+        <ng-template #load> 
+            <h5 class="animated fadeIn infinite" id="loading"></h5>  
+        </ng-template>
+  
+</div>

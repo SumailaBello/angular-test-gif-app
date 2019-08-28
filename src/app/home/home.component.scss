@@ -1,0 +1,25 @@
+form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+  #result-list{
+      margin-bottom: 30px;
+  }
+
+//   the size of the images
+  img{
+      width: 200px;
+      height: 200px;
+  }
+
+@media(max-width: 576px){
+    // mdb-icon{
+    //     display: none;
+    // }
+    input#userQuery{
+        width: 100% !important;
+    }
+}
